@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iosBootcampCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Feb-a0-to0">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMF-l4-1d2">
+                                <rect key="frame" x="273" y="285" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="captureButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOq-5E-jNt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUO-VH-0bl">
+                                <rect key="frame" x="277" y="328" width="46" height="30"/>
+                                <state key="normal" title="Filter"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Feb-a0-to0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2r3-ts-yLg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Feb-a0-to0" secondAttribute="trailing" id="LtF-4g-J1f"/>
+                            <constraint firstItem="DMF-l4-1d2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NKh-ix-0xa"/>
+                            <constraint firstAttribute="trailing" secondItem="Feb-a0-to0" secondAttribute="trailing" id="YTO-tj-aMU"/>
+                            <constraint firstItem="DMF-l4-1d2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eet-BZ-W8r"/>
+                            <constraint firstItem="Feb-a0-to0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fES-O0-BBM"/>
+                            <constraint firstItem="Feb-a0-to0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lxa-ug-57Q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Feb-a0-to0" secondAttribute="bottom" id="n6L-yt-s0t"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LtF-4g-J1f"/>
+                                <exclude reference="lxa-ug-57Q"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="DMF-l4-1d2" id="12s-4g-AoK"/>
+                        <outlet property="returnedImage" destination="Feb-a0-to0" id="QSm-mM-kvA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="469"/>
+        </scene>
+    </scenes>
+</document>
